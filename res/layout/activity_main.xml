@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/StateOfCharge"
+            style="@style/DefaultFont"
+            android:text="Normalized SOC: " />
+
+        <TextView
+            android:id="@+id/StateOfChargeSetpoint"
+            style="@style/DefaultFont"
+            android:text="Actual SOC Setpoint: " />
+
+        <TextView
+            android:id="@+id/StateOfChargeSetpointMaximum"
+            style="@style/DefaultFont"
+            android:text="Maximum SOC Setpoint: " />
+
+        <TextView
+            android:id="@+id/StateOfChargeSetpointMinimum"
+            style="@style/DefaultFont"
+            android:text="Minimum SOC Setpoint: " />
+
+        <TextView
+            android:id="@+id/StateOfChargeHoldPercent"
+            style="@style/DefaultFont"
+            android:text="Actual SOC Hold (%): " />
+
+        <TextView
+            android:id="@+id/StateOfChargeHoldMaximum"
+            style="@style/DefaultFont"
+            android:text="Maximum SOC Hold (%): " />
+
+        <TextView
+            android:id="@+id/StateOfChargeHoldKwh"
+            style="@style/DefaultFont"
+            android:text="Actual SOC Hold (kWh): " />
+
+        <TextView
+            android:id="@+id/DistanceUntilChargedSetpoint"
+            style="@style/DefaultFont"
+            android:text="Actual DUC Setpoint: " />
+
+        <TextView
+            android:id="@+id/DistanceUntilChargedSetpointMaximum"
+            style="@style/DefaultFont"
+            android:text="Maximum DUC Setpoint: " />
+
+        <TextView
+            android:id="@+id/DistanceUntilChargedDistanceDriven"
+            style="@style/DefaultFont"
+            android:text="Current DUC Distance Driven: " />
+
+        <TextView
+            android:id="@+id/GreenZoneStatus"
+            style="@style/DefaultFont"
+            android:text="GreenZone Mode: " />
+
+        <TextView
+            android:id="@+id/DistanceUntilChargedStatus"
+            style="@style/DefaultFont"
+            android:text="DUC Active: " />
+
+        <TextView
+            android:id="@+id/DistanceUntilChargedRequested"
+            style="@style/DefaultFont"
+            android:text="Requested DUC Distance: " />
+
+        <TextView
+            android:id="@+id/TEMCEPUDEnabled"
+            style="@style/DefaultFont"
+            android:text="TEMC EPUD Enabled: " />
+
+        <TextView
+            android:id="@+id/blank"
+            style="@style/DefaultFont"
+            android:layout_width="241dp"
+            android:text="		" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/StateOfChargeHoldCommandPercent"
+        style="@style/DefaultFont"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linear"
+        android:layout_marginTop="40dp"
+        android:text="Commanded SOC Hold (%): " />
+
+    <TextView
+        android:id="@+id/StateOfChargeHoldCommandKwh"
+        style="@style/DefaultFont"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/StateOfChargeHoldCommandPercent"
+        android:layout_marginTop="20dp"
+        android:text="Commanded SOC Hold (kWh): " />
+
+    <TextView
+        android:id="@+id/StateOfChargeSetpointCommand"
+        style="@style/DefaultFont"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/StateOfChargeHoldCommandKwh"
+        android:layout_marginTop="20dp"
+        android:text="Commanded SOC Setpoint: " />
+
+    <EditText
+        android:id="@+id/editText1"
+        style="@style/DefaultFont"
+        android:layout_alignBaseline="@+id/StateOfChargeHoldCommandPercent"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/StateOfChargeHoldCommandKwh"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editText2"
+        style="@style/DefaultFont"
+        android:layout_alignBaseline="@+id/StateOfChargeHoldCommandKwh"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/StateOfChargeHoldCommandKwh"
+        android:ems="10"
+        android:inputType="number" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText3"
+        style="@style/DefaultFont"
+        android:layout_alignBaseline="@+id/StateOfChargeSetpointCommand"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/StateOfChargeHoldCommandKwh"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="Submit" />
+    
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText2"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/editText2"
+        android:text="Submit" />
+    
+    <Button
+        android:id="@+id/button3"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/editText3"
+        android:text="Submit" />
+
+</RelativeLayout>
